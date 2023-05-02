@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>Sw#2</title>
+	<style type="text/css">
+        table, th, td {
+            border: 1px solid black;
+         }
+         h1,h2,h3,th{
+			font-family: 'EB Garamond';
+			padding:10px;
+		}
+		body {
+        background-color:#A0C4F9;
+        }
+        p{
+			font-family: 'Raleway';
+			padding:10px;
+		}
+		img{ display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+		}
+      </style>
+</head>
+<body>
+
+<h1>Temperature Conversation</h1>
+
+<p id="DT"></p>
+
+<script>
+
+    const D = new Date(); 
+    document.getElementById('DT').innerHTML = D;
+
+</script>
+	<br>
+	<div class="container bg-light text center p-5">
+	<h1>  Fahrenheit to Celsius </h1>
+
+	<p> Insert number in Fahrenheit</p>
+
+	<form>
+          Enter Number: <input type="text"id="num1"> <br>
+          <button Class="btn btn-outline-success" type="submit" onclick="Compute()">CALCULATE</button>
+	</form>
+
+	<script type="text/javascript">
+		function Compute(){
+			let num1 = document.getElementById("num1").value;
+			let product = (num1 -32) * 5 / 9;
+
+			window.alert("Fahrenheit to Celsius is: " + product);
+		}
+	</script>
+	<br>
+	<table>
+    <tr>
+        <th>Celsius (°C)</th>
+        <th>Fahrenheit (°F)</th>    
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>-273.15</td>
+        <td>-459.67</td>
+        <td>Absolute zero
+        temperature</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>32.0</td>
+        <td>Freezing/melting point
+        of water</td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>69.8</td>
+        <td>Room temperature</td>
+    </tr>
+     <tr>
+        <td>37</td>
+        <td>98.6</td>
+        <td>Average body
+        temperature</td>
+    </tr>
+     <tr>
+        <td>100</td>
+        <td>212.0</td>
+        <td>Boiling point of water</td>
+    </tr>
+</table>
+<p>TIP: To convert Fahrenheit to Celsius, all you have to do is subtract 32 and multiply it by .5556 (or 5/9)</p>
+<img src="https://media.istockphoto.com/id/990359134/vector/flat-thermometers-hot-and-cold-mercury-thermometer-with-fahrenheit-and-celsius-scales-warm.jpg?s=612x612&w=0&k=20&c=bSyit94vCB1Z458LFYmyn1YnwsLqcvZSDow71Rn0ljM=" width="350">
+
+ </body>
+</html>
